@@ -1,0 +1,73 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#viewDiv {
+    height: 100%;
+    width: 100%;
+}
+
+.custom-button {
+    background-color: #0079c1;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.custom-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.custom-button span {
+    margin-left: 5px;
+}
+
+.dialog {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    z-index: 1000;
+    width: 400px;
+}
+
+.dialog-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dialog-header h2 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.close-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.dialog-content {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.dialog-content select {
+    margin-top: 10px;
+    width: 100%;
+    padding: 5px;
+}
+
+.dialog-content button {
+    margin-top: 10px;
+    width: 100%;
+}

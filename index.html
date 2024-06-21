@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArcGIS MapView App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://js.arcgis.com/4.27/esri/themes/light/main.css">
+    <link rel="stylesheet" href="https://unpkg.com/@esri/calcite-components@1.0.0-beta.82/dist/calcite/calcite.css">
+    <script src="https://js.arcgis.com/4.27/"></script>
+    <script type="module" src="https://unpkg.com/@esri/calcite-components@1.0.0-beta.82/dist/calcite/calcite.esm.js"></script>
+</head>
+<body>
+    <div id="viewDiv"></div>
+
+    <!-- Dialog HTML for graphs -->
+  <div id="timeSeriesDialog" class="dialog" style="display: none;">
+    <div class="dialog-header">
+      <h2>Time Series Statistics from Sentinel-hub</h2>
+      <button id="closeDialogButton" class="close-button">
+        <calcite-icon icon="x-circle" scale="m"></calcite-icon>
+      </button>
+    </div>
+    <div class="dialog-content">
+      <label for="indexSelect">Select an Index:</label>
+      <select id="indexSelect">
+        <option value="NDVI">NDVI</option>
+        <option value="GNDVI">GNDVI</option>
+      </select>
+      <button id="generateChartButton" class="custom-button">
+        <calcite-icon icon="chart-gear" scale="s"></calcite-icon><span>Generate Chart</span>
+      </button>
+      <canvas id="timeSeriesChart"></canvas>
+    </div>
+  </div>
+
+    <script src="app.js"></script>
+    <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.min.js"></script> -->
+</body>
+</html>
